@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'Convert.dart';
 import 'Result.dart';
+import 'Riwayat.dart';
 import 'input.dart';
 
 void main() {
@@ -77,15 +78,7 @@ class MyAppState extends State<MyApp> {
                 ),
               ),
               Expanded(
-                child: ListView(
-                    children: listViewItem.map((String value) {
-                  return Container(
-                      margin: EdgeInsets.all(10),
-                      child: Text(
-                        value,
-                        style: TextStyle(fontSize: 15),
-                      ));
-                }).toList()),
+                child: Riwayat(listViewItem: listViewItem),
               ),
             ],
           ),
@@ -94,3 +87,4 @@ class MyAppState extends State<MyApp> {
     );
   }
 }
+
